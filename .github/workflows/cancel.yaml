@@ -1,6 +1,6 @@
 name: Skip,Pass,Fail,Cancel
 
-on: workflow_call
+on: workflow_dispatch
 
 jobs:
     pass:

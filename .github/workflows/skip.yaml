@@ -1,0 +1,11 @@
+name: Skip
+
+on: workflow_call
+
+jobs:
+    skip:
+        runs-on: ubuntu-latest
+        if: false
+        steps:
+            - name: Print Skipped Message
+              run: echo "Skipped job would have run here"

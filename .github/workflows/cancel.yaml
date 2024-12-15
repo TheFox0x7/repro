@@ -1,0 +1,25 @@
+name: Skip,Pass,Fail,Cancel
+
+on: push
+
+jobs:
+    pass:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Passed job would have run here"
+    skip:
+        runs-on: ubuntu-latest
+        if: false
+        steps:
+            - name: Print Skipped Message
+              run: echo "Skipped job would have run here"
+    fail:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Fail
+              run: exit 255
+    cancel:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Cancel job
+              run: sleep 900

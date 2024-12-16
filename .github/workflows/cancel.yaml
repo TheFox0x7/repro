@@ -15,11 +15,11 @@ jobs:
         steps:
             - name: Print Skipped Message
               run: echo "Skipped job would have run here"
-    fail:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Fail
-              run: exit 255
+    # fail:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: Fail
+    #           run: exit 255
     cancel:
         runs-on: ubuntu-latest
         steps:

@@ -2,7 +2,6 @@ name: Skip,Pass,Fail,Cancel
 
 on: 
     - workflow_dispatch
-    - push
 
 jobs:
     pass:

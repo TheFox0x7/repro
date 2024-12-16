@@ -1,0 +1,14 @@
+on: push
+
+jobs:
+    nokey:
+        steps:
+            - run: exit 0
+    emptykey:
+        runs-on:
+        steps:
+            - run: exit 0
+    fullkey:
+        runs-on: ubuntu-latest
+        steps:
+            - run: exit 0

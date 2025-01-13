@@ -14,3 +14,16 @@ jobs:
         steps:
             - name: Print Skipped Message
               run: echo "Skipped job would have run here"
+---
+name: Skip2
+
+on: 
+    - workflow_dispatch
+
+jobs:
+    skip:
+        runs-on: ubuntu-latest
+        if: false
+        steps:
+            - name: Print Skipped Message
+              run: echo "Skipped job would have run here"

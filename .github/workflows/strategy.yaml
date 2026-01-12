@@ -1,0 +1,22 @@
+name: Skip
+
+on: 
+  workflow_dispatch:
+    inputs:
+      max:
+        description: 'max amount of jobs'
+        required: true
+        type: number
+
+
+jobs:
+    matrix:
+        runs-on: ubuntu-latest
+        strategy:
+          matrix:
+             os: [ubuntu-latest, windows-latest]
+             node: [14, 16]
+          max-parallel: "${{ inputs.max }}"
+        steps:
+            - name: Print Skipped Message
+              run: echo "Skipped job would have run here"

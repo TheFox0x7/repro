@@ -1,4 +1,4 @@
-name: Skip
+name: strategy
 
 on: 
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
           matrix:
              os: [ubuntu-latest, windows-latest]
              node: [14, 16]
-          max-parallel: "${{ inputs.max }}"
+          max-parallel: ${{ inputs.max }}
         steps:
             - name: Print Skipped Message
               run: echo "Skipped job would have run here"
